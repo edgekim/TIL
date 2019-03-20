@@ -8,6 +8,45 @@ solution 메소드를 원성하세요.
 money는 1 이상 1,000,000 이하인 자연수입니다. 
 
 
+<3/20>
+
+``` python
+money = input("Enter your money amount:") #input을 받는다.
+money = int(money)#string 자료형을 int로 변경한다. 
+result = list([0,0,0,0,0,0,0,0,0]) #list에 9개 항목을 각각 0으로 선언해두자.
+
+if money >= 50000: #50,000원 이상인 경우
+    result[0] = money//50000 #50,000으로 나눠서 몫을 list 에 저장한다.
+    money = money%50000
+if money >= 10000:
+    result[1] = money//10000
+    money = money%10000
+if money >= 5000:
+    result[2] = money//5000
+    money = money%5000
+if money >= 1000:
+    result[3] = money//1000
+    money = money%1000
+if money >= 500:
+    result[4] = money//500
+    money = money%500
+if money >= 100:
+    result[5] = money//100
+    money = money%100
+if money >= 50:
+    result[6] = money//50
+    money = money%50
+if money >= 10:
+    result[7] = money//10
+    money = money%10
+else :
+    result[8] = money
+    money = 0
+
+print (result)
+```
+
+
 
 <3/19>
 ```python
