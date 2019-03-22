@@ -8,6 +8,28 @@ solution 메소드를 원성하세요.
 money는 1 이상 1,000,000 이하인 자연수입니다. 
 
 
+<3/21>
+i를 0부터 늘려가면서 ... [i]<- 이렇게 쓰고 싶은데 ... 방법을 모르겠다.
+``` python
+money = input("Enter your money amount:") #input을 받는다.
+money = int(money)#string 자료형을 int로 변경한다.
+result = list([0,0,0,0,0,0,0,0,0]) #list에 9개 항목을 각각 0으로 선언해두자.
+type = list([50000,10000,5000,1000,500,100,50,10,1])
+
+for i in range(len(result)):
+    if money >= type[0]:
+        result[0] = money//type[0]
+        money = money%type[0]
+
+        print(money)
+        print(result)
+    else:
+        result[0] = 0
+print(result)
+
+``` 
+
+
 <3/20>
 
 ``` python
