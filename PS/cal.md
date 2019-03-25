@@ -4,6 +4,48 @@
 1. 시작시각과 종료시각을 입력받아 duration_time을 산출한다.
 2. duration_time을 단위시간을 나눈 후, 단위시간을 요금으로 곱하여 총요금을 계산한다. 
 3. (요금이 너무 많이 나오면 안되니...) 24시간 최대요금을 신설한다. 이용시간이 24시간을 초과할 경우, 계산요금을 24시간 최대요금으로 치환하여 적용한다.
+4. 24시간 최대요금이라는 정책은, 반복하는 24시간을 최대요금으로 치환하는 것이니, 연박이 발생하면 24시간 최대요금이 연박만큼 추가된다. 
+
+ver. 0325
+```python
+from datetime import datetime, timedelta #날짜 클래스를 가져와야겠지. 타임스탬프는 필요없나?
+import math #올림 사용하려면 ??
+
+period_time = int(10) #기본시간 설정
+period_price = int(1000) #기본요금 설정
+period_cnt = int(0) #duration_time 을 period_time으로 나눠서 몇 구간을 반복하는지 카운트할 거다. 우선 초기화 하자.
+calculated_price = int(0)
+max_24h_price = int(15000) #24시간 최대요금을 설정할 수 있다. 우선 15,000으로 설정하자.
+n24h_cnt = int(0)
+total_price = int(0)
+
+duration_time = int(input("enter your duration_time:")) #정수로 만들자, 종료시각 - 시각시각 으로 duration_time을 구할 것인데,,, 종료시각, 시작시각은 timedate 사용법을 알아야하니 ... 나중에
+n24h_cnt = duration_time // 1440 #연박이용여부를 확인하자
+
+if n24h_cnt == 0:
+    period_cnt = math.ceil(duration_time / period_time)
+    calculated_price = period_cnt * period_price
+    calculated_price = min(calculated_price, max_24h_price)
+elif n24h_cnt == 1:
+    period_cnt = math.ceil((duration_time % 1440) / period_time)
+    calculated_price = period_cnt * period_price
+    calculated_price = min(calculated_price, max_24h_price) + max_24h_price
+else :
+    n = duration_time // 1440 
+    period_cnt = math.ceil((duration_time % 1440) / period_time)
+    calculated_price = period_cnt * period_price
+    calculated_price = min(calculated_price, max_24h_price) + (max_24h_price * n)
+
+total_price = calculated_price
+
+print("기간은:", duration_time)
+print("n24h횟수:", n24h_cnt )
+print("잔여구간반복수:", period_cnt)
+print("계산요금:", calculated_price)
+print("최종요금:", total_price)
+
+```
+
 
 ver. 0324
 ```python
