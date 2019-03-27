@@ -6,6 +6,67 @@
 3. (요금이 너무 많이 나오면 안되니...) 24시간 최대요금을 신설한다. 이용시간이 24시간을 초과할 경우, 계산요금을 24시간 최대요금으로 치환하여 적용한다.
 4. 24시간 최대요금이라는 정책은, 반복하는 24시간을 최대요금으로 치환하는 것이니, 연박이 발생하면 24시간 최대요금이 연박만큼 추가된다. 
 
+
+ver. 0327 (째려만 보다가 끝났다....)
+```
+from datetime import datetime, timedelta #날짜 클래스를 가져와야겠지. 타임스탬프는 필요없나?
+import math #올림 사용하려면 ??
+
+
+
+#parking_lot_product / 주차장의 상품정보를 요일별로 저장해두자
+extra_fare_time = [15, 15, 15, 15, 15, 15, 15, 15] #일월화수목금토일+공휴일 (8개)
+extra_fare = [600, 600, 600, 600, 600, 600, 600, 600] #일월화수목금토일+공휴일 (8개)
+basic_fare_time = [30, 30, 30, 30, 30, 30, 30, 30]
+extra_fare = [1200, 1200, 1200, 1200, 1200, 1200, 1200, 1200] #일월화수목금토일+공휴일 (8개)
+time_ticket_02 = [2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000]
+time_ticket_06 = [4000, 4000, 4000, 4000, 4000, 4000, 4000, 4000]
+time_ticket_24 = [10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000]
+24h_cab_price = [15000, 15000, 15000, 15000, 15000, 15000, 15000, 15000]
+
+
+
+duration_time = int(input("enter your duration_time:")) #정수로 만들자, 종료시각 - 시각시각 으로 duration_time을 구할 것인데,,, 종료시각, 시작시각은 timedate 사용법을 알아야하니 ... 나중에
+24hs_cnt = 0 #24시간 이상인 구간이 몇개인지 카운트하자
+24hs_cnt = duration_time // 1440
+selected_option = 0 #basic_fare_time == 0 
+
+
+24hs_cnt > 
+
+period_time = int(10) #기본시간 설정
+period_price = int(1000) #기본요금 설정
+period_cnt = int(0) #duration_time 을 period_time으로 나눠서 몇 구간을 반복하는지 카운트할 거다. 우선 초기화 하자.
+calculated_price = int(0)
+max_24h_price = int(15000) #24시간 최대요금을 설정할 수 있다. 우선 15,000으로 설정하자.
+n24h_cnt = int(0)
+total_price = int(0)
+
+if n24h_cnt == 0:
+    period_cnt = math.ceil(duration_time / period_time)
+    calculated_price = period_cnt * period_price
+    calculated_price = min(calculated_price, max_24h_price)
+elif n24h_cnt == 1:
+    period_cnt = math.ceil((duration_time % 1440) / period_time)
+    calculated_price = period_cnt * period_price
+    calculated_price = min(calculated_price, max_24h_price) + max_24h_price
+else :
+    n = duration_time // 1440
+    period_cnt = math.ceil((duration_time % 1440) / period_time)
+    calculated_price = period_cnt * period_price
+    calculated_price = min(calculated_price, max_24h_price) + (max_24h_price * n)
+
+total_price = calculated_price
+
+print("기간은:", duration_time)
+print("n24h횟수:", n24h_cnt )
+print("잔여구간반복수:", period_cnt)
+print("계산요금:", calculated_price)
+print("최종요금:", total_price)
+
+```
+
+
 ver. 0326
 시간요금 계산기의 구조를 이제야 깨달았다.
 하나. 시간요금의 '기본요금'은 시간권과 동일한 것이라봐도 무방하다.
