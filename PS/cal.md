@@ -7,6 +7,46 @@
 4. 24시간 최대요금이라는 정책은, 반복하는 24시간을 최대요금으로 치환하는 것이니, 연박이 발생하면 24시간 최대요금이 연박만큼 추가된다. 
 
 
+ver. 0328 ... 내가 뭘하고 있는지 모르겠다. 
+```python
+from datetime import datetime, timedelta #날짜 클래스를 가져와야겠지. 타임스탬프는 필요없나?
+import math #올림 사용하려면 ??
+
+
+
+#parking_lot_product / 주차장의 상품정보를 요일별로 저장해두자
+extra_fare_time = [15, 15, 15, 15, 15, 15, 15, 15] #일월화수목금토일+공휴일 (8개)
+extra_fare = [600, 600, 600, 600, 600, 600, 600, 600] #일월화수목금토일+공휴일 (8개)
+basic_fare_time = [30, 30, 30, 30, 30, 30, 30, 30]
+basic_fare = [1200, 1200, 1200, 1200, 1200, 1200, 1200, 1200] #일월화수목금토일+공휴일 (8개)
+time_ticket_02 = [2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000]
+time_ticket_06 = [4000, 4000, 4000, 4000, 4000, 4000, 4000, 4000]
+time_ticket_24 = [10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000]
+h24_cab_price = [15000, 15000, 15000, 15000, 15000, 15000, 15000, 15000]
+
+
+price = list([0,0,0,0,0])
+#요금합계는 1) 기본요금 or 시간권  + 2) 첫 24시간 요금 + 3) 마지막 24시간 요금 + 4) 중간일 24시간 요금으로 구성된다.
+
+#주어져야 하는 값: 1) 선택요금 2) 입차, 출차시각
+
+duration_time = 1200
+selected_product = 0
+if selected_product == 0:
+    if duration_time <= 1440: # 24시간 미만인 경우
+        first_period = basic_fare_time[0]
+        first_period_fare = basic_fare[0]
+        rest_f24_time = duration_time - first_period
+        rest_f24_extra_period_cnt = math.ceil(rest_f24_time / extra_fare_time )
+        rest_f24_fare = min(first_period_fare + rest_f24_extra_period_cnt * extra_fare[0] , h24_cab_price)
+    else:
+        print(1)
+        
+else:
+    print(1)
+
+```
+
 ver. 0327 (째려만 보다가 끝났다....)
 ```
 from datetime import datetime, timedelta #날짜 클래스를 가져와야겠지. 타임스탬프는 필요없나?
