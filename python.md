@@ -1,8 +1,33 @@
 # Today-I-Learned-
 Today I Learned 💚🤓🌱
 
-
 <h3>Python</h3>
+
+3/30 - py4e > chapter 8 - 3 
+- split 은 공백을 기준으로 원소를 분리한다.
+
+```
+abc = 'With theree words'
+stuff = abc.split()
+print(stuff)
+
+print(len(stuff))
+print(stuff[0])
+
+for w in stuff :
+  print(w)
+```
+- Double split pattern 
+ㄴ split 기준을 '@'으로 설정하면 이메일 주소의 도메인과 주소를 구분할 수 있다. 
+```
+words = line.split() #공백 기준으로 원소르 분리 
+email = words[1]
+pieces = email.split('@')
+print(pieces[1])
+```
+
+
+
 3/18 > Lists
 <li>PY4E > Ch.8 > Lists (https://www.py4e.com/lessons/lists)</li>
 <li>리스트는 가장 간단한 자료구조, 콜레션의 한 종류이다.</li>
