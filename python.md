@@ -3,6 +3,41 @@ Today I Learned 💚🤓🌱
 
 <h3>Python</h3>
 
+4/1 - py4e > chapter 9 - 3
+```python
+#loops를 이용한 dictionary 
+
+counts = dict()
+print ('Enter a line of text:')
+line = input('')
+
+words = line.split()
+print ('Words:', words )
+
+print ('Counting ...')
+for word in words :
+    counts[word] = counts.get(word,0) + 1
+print('Counts', counts)
+
+```
+```
+#키, 밸류를 짝을 지어서 출력해보자 
+jjj = {'chuck': 1 , 'fred':42, 'jan': 100}
+for aaa, bbb in jjj.items():
+    print(aaa,bbb)
+
+```
+
+
+
+3/31 - py4e > chapter 9 - 1, 2 
+```
+#dictionary 
+어제 저장한 것은 어디로 갔지?
+dictionary 는 list와 다른다. key:value 로 짝지은 bag 같다. 순서도 없다. 
+```
+
+
 3/30 - py4e > chapter 8 - 3 
 - split 은 공백을 기준으로 원소를 분리한다.
 
