@@ -3,6 +3,29 @@ Today I Learned 💚🤓🌱
 
 <h3>Python</h3>
 
+4/6 - py4e > chapter 9 - 3
+```python
+counts = dict()
+names = ['csev','cwen', 'csev', 'zqian', 'cwen', 'zqian', 'zqian', 'zqian']
+for name in names :
+    if name not in counts:
+        counts[name] = 1
+    else:
+        counts[name] = counts[name] +1
+print(counts)
+
+```
+
+딕션너리 와 for문으 이용한 이름 숫자세기 ...
+for 문의 개념을 제대로 숙지하고 있지 못 했다는 걸 깨달았다.
+
+그래서 ... 다시 찾아서 읽어보았다.
+https://wikidocs.net/22
+
+
+
+
+
 4/1 - py4e > chapter 9 - 3
 ```python
 #loops를 이용한 dictionary 
