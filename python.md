@@ -3,6 +3,18 @@ Today I Learned 💚🤓🌱
 
 <h3>Python</h3>
 
+4/8 - py4e > chapter 9 - 3
+```python
+#get 메소드를 사용하는 법을 배웠다.
+
+counts = dict()
+names = ['csev','cwen', 'csev', 'zqian', 'cwen', 'zqian', 'zqian', 'zqian']
+for name in names :
+    counts[name] = counts.get(name, 0) + 1 #counts 에서 get() 메소드를 이용하여 if 이미 존재하는 key라며 key값으 name 이라는 변수에 반환하고, 그렇지 않다면 0으 반환한다. 그리고 이미 존재하는 것이면 + 1를 한다. 
+print(counts)
+
+```
+
 4/6 - py4e > chapter 9 - 3
 ```python
 counts = dict()
