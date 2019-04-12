@@ -3,6 +3,17 @@ Today I Learned 💚🤓🌱
 
 <h3>Python</h3>
 
+
+4/12 - py4e > chapter 9 -3 
+```python
+### dictionary 르 이용하여 for 문을 돌릴 수 있ㄷ. 
+jjj = {'chuck':1, 'fred':43, 'jan': 100}
+for aaa, bbb in jjj.items():
+    print (aaa,bbb)
+
+```
+
+
 4/8 - py4e > chapter 9 - 3
 ```python
 #get 메소드를 사용하는 법을 배웠다.
