@@ -4,6 +4,37 @@ Today I Learned 💚🤓🌱
 <h3>Python</h3>
 
 
+4/16 - py4e > chapter 10-1 
+```python
+### 튜플은 쓰고 버릴 수 있다. 
+### 좌변에 변수를 가진 채 튜플로 선언을 할 수 있다. python만 가능하다
+
+(x, y)  = (4, 'fred')
+print(y)
+
+(a, b) = (99, 88)
+print(a)
+
+###
+d = dict()
+d['csev'] = 2
+d['cwen'] = 4
+print(d)
+
+for (k, v) in d.items():
+    print(k,v)
+
+tups = d.items()
+print(tups)
+
+### 튜플은 비교하는 것이 쉽다.
+ 
+
+
+```
+
+
+
 4/13 - py4e > chapter 10-1
 ```python
 ### tuple 이라는 것으 배워봅니다. 
