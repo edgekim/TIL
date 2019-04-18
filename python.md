@@ -3,6 +3,30 @@ Today I Learned 💚🤓🌱
 
 <h3>Python</h3>
 
+4/18 - py4e > chapter 10-2 
+``` python 
+### 이용자들으 이용후기에서 가장 많이 사용된 단어를 카운팅 해보자.
+### 1등은 "너무" 였다.
+
+fhand = open('reviews.txt')
+counts = dict()
+for line in fhand:
+    words = line.split()
+    for word in words:
+        counts[word] = counts.get(word, 0) + 1
+
+lst = list()
+for key, val in counts.items():
+    newtup = (val, key)
+    lst.append(newtup)
+
+lst = sorted(lst, reverse=True)
+
+for val, key in lst[:100] :
+    print(key)
+
+```
+
 
 4/16 - py4e > chapter 10-1 
 ```python
