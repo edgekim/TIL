@@ -3,6 +3,23 @@ Today I Learned 💚🤓🌱
 
 <h3>Python</h3>
 
+4/21 - py42 > chapter 11-1
+```python3
+### 정규식은 python은 아니지만 python고 함께 많이 사용되니 배웁니다.
+### 정규식 라이브러리를 불러오기 위해서 import re를 합니다.
+### 리뷰를 모아놓은 reviews.txt 파일에서 "주차장"이라는 단어로 시작하는 줄을 불러와 출력합니다. 
+import re
+
+hand = open('reviews.txt')
+for line in hand:
+    line = line.rstrip()
+    if re.search('^주차장', line) :
+        print(line)
+
+
+```
+
+
 4/18 - py4e > chapter 10-2 
 ``` python 
 ### 이용자들으 이용후기에서 가장 많이 사용된 단어를 카운팅 해보자.
