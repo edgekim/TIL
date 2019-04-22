@@ -3,7 +3,19 @@ Today I Learned 💚🤓🌱
 
 <h3>Python</h3>
 
-4/21 - py42 > chapter 11-1
+4/22 - py4e > chapter 11-1
+```python3
+### 정규식 표현 
+^X: X로 시작하는 것 
+.: Match any character 
+*: Many times, 횟수제한 없음 
+\S: Match any non-whitespace character 
++: One or more times 
+
+```
+
+
+4/21 - py4e > chapter 11-1
 ```python3
 ### 정규식은 python은 아니지만 python고 함께 많이 사용되니 배웁니다.
 ### 정규식 라이브러리를 불러오기 위해서 import re를 합니다.
