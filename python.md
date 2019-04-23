@@ -3,6 +3,53 @@ Today I Learned 💚🤓🌱
 
 <h3>Python</h3>
 
+4/23 - py4e > chapter 11-2
+```python 
+### re.finall()은 빈 리스트 혹으 sub-strings의 리스트를 반환한다. regular expression 에 일치하는 ...
+### [0-9]+ == " 한 자리 이상으로, 0~9 중 일치하는 숫자 찾기 
+### [AEIOUM]+ == A, E, I, O, U, M 으로 시작한 한글자 이상의 문자열 
+
+import re
+x = 'My 2 favorite numbers are 19 and 42'
+y = re.findall('[0-9]+', x)
+print(y)
+
+y = re.findall('[AEIOUM]+', x)
+print(y)
+
+### Greedy Matching 
+### 동일 조건이라면 "더 긴" 문자열을 선택하게 된다.
+### ^F.+: 
+
+### Non-Greedy Matching 
+### 동일 조건이라면 "더 짧은" 문자열을 선택하 된다. 
+### ^F.+?: 
+
+import re
+x = 'My 2 favorite numbers are 19 and 42'
+y = re.findall('[0-9]+', x)
+print(y)
+
+y = re.findall('[AEIOUM]+', x)
+print(y)
+
+
+
+### 
+### \S+@\S+ 
+
+import re
+x = 'From stephen.marquard@uct.ac.za Sat Jan 5 09:13:16 2009'
+y = re.findall('\S+@\S+', x)
+print(y)
+
+y = re.findall('^From (\S+@\S+)', x)
+print(y)
+
+
+```
+
+
 4/22 - py4e > chapter 11-1
 ```python3
 ### 정규식 표현 
