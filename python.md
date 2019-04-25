@@ -3,6 +3,41 @@ Today I Learned 💚🤓🌱
 
 <h3>Python</h3>
 
+4/25 - py4e > chpater 11-3 
+```python
+### 데이타 파싱하여 이메일 호스팅 찾아내기 
+data = 'From stephen.marquard@uct.ac.za Sat Jan 5 09:14:15 2009'
+atpos = data.find('@')
+print(atpos)
+
+sppos = data.find(' ', atpos)
+print(sppos)
+
+host = data[atpos+1 : sppos]
+print(host)
+
+
+### 다른 방법
+line = 'From stephen.marquard@uct.ac.za Sat Jan 5 09:14:15 2009'
+
+words = line.split()
+email = words[1]
+pieces = email.split('@')
+print(pieces[1])
+
+
+### 정규식 이용하기
+import re
+lin = 'From stephen.marquard@uct.ac.za Sat Jan 5 09:14:15 2009'
+y = re.findall('^From .*@([^ ]*)', lin)
+print(y)
+
+
+
+
+```
+
+
 4/23 - py4e > chapter 11-2
 ```python 
 ### re.finall()은 빈 리스트 혹으 sub-strings의 리스트를 반환한다. regular expression 에 일치하는 ...
