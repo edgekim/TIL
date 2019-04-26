@@ -3,6 +3,36 @@ Today I Learned 💚🤓🌱
 
 <h3>Python</h3>
 
+
+4/26 - Python for kids/ch.2 
+- EOL은 End-of-line 
+- 문자열이 한 줄 이상의 여러 줄로 된 텍스트를 사용하려면 (multiline string) 세 개의 홑따옴표(''')를 사용하고 각 줄 사이에는 ENTER를 입력한다.
+```python
+fred = '''How do dinosaurs pay their bills? 
+With tryannosaurus checks!''' 
+```
+- 문자열에서 세개의 홑따옴표 대신 홈따옴표나 겹따옴표를 쓰려면 따옴표 앞에 백슬래시(\)를 추가하면 된다. 이스케이핑(escaping).
+```python
+fred = 'He said, \"Aren\'t can\'t shouldn\'t wouldn\'t'
+```
+- 문자열에 값을 포함할 수 있다. "%s"를 이용하면 된다. 
+```python 
+my_score = 100
+message = "I scored %s"
+print(message % my_score)
+```
+- 2개 이상의 값을 넣고 싶다면 ()를 쓴다. * 이게 tupple 인가?
+```python 
+my_score = 100
+my_turns = 5
+message = "I scored %s points by %s"
+print(message % (my_score, my_turns))
+```
+
+
+
+
+
 4/25 - py4e > chpater 11-3 
 ```python
 ### 데이타 파싱하여 이메일 호스팅 찾아내기 
