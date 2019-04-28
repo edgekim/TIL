@@ -3,6 +3,28 @@ Today I Learned 💚🤓🌱
 
 <h3>Python</h3>
 
+4/28 - py4e ch.12-1
+```python
+### Network program 
+### python에서 socket 을 이용하기, 소켓 라이브러리만 불러오면 된다. 
+###python으로 간단한 웹브라우저를 만들어보자
+import socket
+
+mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+mysock.connect(('data.pr4e.org', 80))
+cmd = 'GET http://data.pr4e.org/romeo.txt HTTP/1.0\n\n'.encode()
+mysock.send(cmd)
+
+while True:
+    data = mysock.recv(256)
+    if (len(data) <1):
+        break
+    print(data.decode())
+mysock.close()
+
+### 근데 왜 400 bad Request로 응답하는지 ... 이유를 못 찾겠다 ㅠ.ㅠ 
+
+```
 
 4/26 - Python for kids/ch.2 
 - EOL은 End-of-line 
