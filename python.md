@@ -3,6 +3,16 @@ Today I Learned 💚🤓🌱
 
 <h3>Python</h3>
 
+4/29 - py4e ch.12-4
+```python
+### ASC2는 금방 한계에 도달했고, UNICODE는 너무 무겁ㄷ. 
+### UTF-32는 한 글자에 4byte, UTF-16은 2byte라서 인터넷으로 전송할 때, 너무 무겁다.
+### UTF-8은 한 글자에 1~4byte로 유동적이다.
+### python3에서 모든 strings은 unicode 이다.
+### 소켓으로 통신할 때는 보내기전에 encode 를 받은 것은 decode를 해야한다. 
+```
+
+
 4/28 - py4e ch.12-1
 ```python
 ### Network program 
