@@ -3,6 +3,23 @@ Today I Learned 💚🤓🌱
 
 <h3>Python</h3>
 
+5/2 - py4e ch.12-5
+```python
+### urllib 를 이용하며 손쉽게 웹브라우저를 만드 수 있다 
+import urllib.request, urllib.parse, urllib.error
+
+fhand = urllib.request.urlopen('http://data.pr4e.org/romeo.txt')
+
+counts = dict()
+for line in fhand:
+    words = line.decode().split()
+    for word in words:
+        counts[word] = counts.get(word, 0) + 1
+print(counts)
+
+
+```
+
 4/29 - py4e ch.12-4
 ```python
 ### ASC2는 금방 한계에 도달했고, UNICODE는 너무 무겁ㄷ. 
