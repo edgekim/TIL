@@ -3,6 +3,27 @@ Today I Learned 💚🤓🌱
 
 <h3>Python</h3>
 
+5/10 - py4e ch.12-6
+## python을 이용한 웹페이지 크롤링 코드를 만들어보았습닏. +_+ 
+```python
+import urllib.request, urllib.parse, urllib.error
+from bs4 import BeautifulSoup
+import ssl
+
+ctx = ssl.create_default_context()
+ctx.check_hostname = False
+ctx.verify_mode = ssl.CERT_NONE
+
+url = input('Enter-')
+html = urllib.request.urlopen(url, context=ctx).read()
+soup = BeautifulSoup(html, 'html.parser')
+
+tags = soup('a')
+for tag in tags:
+    print(tag.get('href', None))
+    
+```
+
 5/2 - py4e ch.12-5
 ```python
 ### urllib 를 이용하며 손쉽게 웹브라우저를 만드 수 있다 
