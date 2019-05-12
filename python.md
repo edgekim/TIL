@@ -3,8 +3,8 @@ Today I Learned 💚🤓🌱
 
 <h3>Python</h3>
 
-5/10 - py4e ch.12-6
-## python을 이용한 웹페이지 크롤링 코드를 만들어보았습닏. +_+ 
+5/12 - py4e ch.12-6
+## python을 이용한 웹페이지 크롤링 코드를 만들어보았습니다. +_+ 
 ```python
 import urllib.request, urllib.parse, urllib.error
 from bs4 import BeautifulSoup
