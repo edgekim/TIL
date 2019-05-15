@@ -3,9 +3,16 @@ Today I Learned 💚🤓🌱
 
 <h3>Python</h3>
 
+5/15 - py4e ch.14-1
+- 객체지향 프로그램의 개념을 배웠습니다.
+- class 는 쿠키틀 
+- instance, object 는 쿠키틀로 찍어낸 쿠피
+- method 는 객체 내의 코드, 단 범위는 객체로 한정한다. 
+
 5/12 - py4e ch.12-6
-## python을 이용한 웹페이지 크롤링 코드를 만들어보았습니다. +_+ 
+
 ```python
+## python을 이용한 웹페이지 크롤링 코드를 만들어보았습니다. +_+ 
 import urllib.request, urllib.parse, urllib.error
 from bs4 import BeautifulSoup
 import ssl
