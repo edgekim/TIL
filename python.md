@@ -3,6 +3,25 @@ Today I Learned 💚🤓🌱
 
 <h3>Python</h3>
 
+5/16 - py4e ch.14-2
+```python
+class PartyAnimal:
+    x = 0
+
+def party(self):
+    self.x = self.x + 1
+    print("So far", self.x)
+
+an = PartyAnimal()
+
+an.party()
+an.party()
+an.party()
+
+```
+
+
+
 5/15 - py4e ch.14-1
 - 객체지향 프로그램의 개념을 배웠습니다.
 - class 는 쿠키틀 
