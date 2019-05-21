@@ -3,6 +3,24 @@ Today I Learned 💚🤓🌱
 
 <h3>Python</h3>
 
+5/21 - py4e ch.14-3 https://www.youtube.com/watch?v=bal0Fv6QE9w
+- 객첵의 Lifecycle(생애주기?) 
+- construnctor 생성ㅈ 
+```python
+class PartyAnimal:
+    x = 0
+
+    def __init__(self):
+    print('I am constructred')
+    
+    def party(self):
+        self.x = self.x + 1
+        print('So far', self.x)
+    
+    def ___del___(self):
+        print('I am destructed') 
+```
+
 5/16 - py4e ch.14-2
 ```python
 class PartyAnimal:
