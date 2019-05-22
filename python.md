@@ -2,6 +2,8 @@
 Today I Learned 💚🤓🌱
 
 <h3>Python</h3>
+5/22 - py4e ch.14-3 
+- 오브젝트, 메소드에 대한 공부
 
 5/21 - py4e ch.14-3 https://www.youtube.com/watch?v=bal0Fv6QE9w
 - 객첵의 Lifecycle(생애주기?) 
