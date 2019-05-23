@@ -2,6 +2,11 @@
 Today I Learned 💚🤓🌱
 
 <h3>Python</h3>
+523 - py4e ch.15-1 Database
+- Relational Database는 70년대만 해도 인기가 없었다.
+- DBA의 역할 
+- SQLlite 설치 
+
 5/22 - py4e ch.14-3 
 - 오브젝트, 메소드에 대한 공부
 
