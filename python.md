@@ -1,8 +1,15 @@
 # Today-I-Learned-
 Today I Learned 💚🤓🌱
 
+
+
 <h3>Python</h3>
-523 - py4e ch.15-1 Database
+
+5/25 - py4e ch.15-2 Database
+- insert, update, delete SQL lite로 실습 
+- https://www.youtube.com/watch?v=yRJE-nk20sM 
+
+5/23 - py4e ch.15-1 Database
 - Relational Database는 70년대만 해도 인기가 없었다.
 - DBA의 역할 
 - SQLlite 설치 
