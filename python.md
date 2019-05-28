@@ -5,6 +5,10 @@ Today I Learned 💚🤓🌱
 
 <h3>Python</h3>
 
+5/28 - py4e ch.15-3, 4 Databse
+- https://www.youtube.com/watch?v=MsZoGw4QEpU
+
+
 5/25 - py4e ch.15-2 Database
 - insert, update, delete SQL lite로 실습 
 - https://www.youtube.com/watch?v=yRJE-nk20sM 
