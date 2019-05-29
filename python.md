@@ -5,6 +5,9 @@ Today I Learned 💚🤓🌱
 
 <h3>Python</h3>
 
+5/29 - py4e ch.15-5 Databse
+- https://www.youtube.com/watch?v=GfuH_8uH16k
+
 5/28 - py4e ch.15-3, 4 Databse
 - https://www.youtube.com/watch?v=MsZoGw4QEpU
 
