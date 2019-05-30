@@ -5,6 +5,10 @@ Today I Learned 💚🤓🌱
 
 <h3>Python</h3>
 
+
+5/30 - py4e ch.15-6  Using Join
+- https://www.youtube.com/watch?v=zMOSVrb82iU
+
 5/29 - py4e ch.15-5 Databse
 - https://www.youtube.com/watch?v=GfuH_8uH16k
 
